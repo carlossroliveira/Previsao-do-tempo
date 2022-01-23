@@ -14,11 +14,15 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 87.5%;
   }
 }
+
 body {
   font: 400 1rem "Inter", sans-serif;
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0;
+  border: 3px solid tomato;  /* REMOVER ESTA LINHA */
 }
+
 ::-webkit-scrollbar {
   width: 12px
 }

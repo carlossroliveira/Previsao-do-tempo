@@ -2,6 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React from 'react';
+import { Layout } from './components/Layout';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
@@ -11,6 +12,7 @@ export const App = (): JSX.Element => {
   return (
     <>
       <GlobalStyle />
+      <Layout />
     </>
   );
 };
