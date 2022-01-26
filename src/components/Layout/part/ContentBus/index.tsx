@@ -9,11 +9,16 @@ import React from 'react';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC } from './contentTwoStyles';
+import { ContainerSC } from './contentBusStyles';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
 
-export const ContentTwo = (): JSX.Element => {
-  return <ContainerSC>CONTENTTWO</ContainerSC>;
+export const ContentBus = (): JSX.Element => {
+  return (
+    <ContainerSC>
+      <input type="text" />
+      <button>Buscar</button>
+    </ContainerSC>
+  );
 };

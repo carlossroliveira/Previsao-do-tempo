@@ -6,8 +6,10 @@ import React from 'react';
 // Components
 // -------------------------------------------------
 import { Header } from './part/Header';
-import { ContentOne } from './part/ContentOne';
-import { ContentTwo } from './part/ContentTwo';
+import { Sidebar } from './part/Sidebar';
+import { ContentMap } from './part/ContentMap';
+import { ContentBus } from './part/ContentBus';
+import { ContentInf } from './part/ContentInf';
 import { Footer } from './part/Footer';
 // -------------------------------------------------
 // Styles
@@ -21,8 +23,10 @@ export const Layout = (): JSX.Element => {
   return (
     <ContainerSC>
       <Header />
-      <ContentOne />
-      <ContentTwo />
+      <Sidebar />
+      <ContentMap />
+      <ContentBus />
+      <ContentInf />
       <Footer />
     </ContainerSC>
   );

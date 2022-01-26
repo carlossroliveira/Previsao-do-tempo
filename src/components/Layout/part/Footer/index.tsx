@@ -15,5 +15,14 @@ import { ContainerSC } from './footerStyles';
 // -------------------------------------------------
 
 export const Footer = (): JSX.Element => {
-  return <ContainerSC>FOOTER</ContainerSC>;
+  return (
+    <ContainerSC>
+      Animações Animações Animações Animações Animações Animações Animações
+      Animações Animações Animações Animações Animações Animações Animações
+      Animações Animações Animações Animações Animações Animações Animações
+      Animações Animações Animações Animações Animações Animações Animações
+      Animações Animações Animações Animações Animações Animações Animações
+      Animações Animações Animações Animações Animações Animações{' '}
+    </ContainerSC>
+  );
 };

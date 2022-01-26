@@ -9,15 +9,11 @@ import React from 'react';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC } from './headerStyles';
+import { ContainerSC } from './ContentMapStyles';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
 
-export const Header = (): JSX.Element => {
-  return (
-    <ContainerSC>
-      <h1>Previsão do Tempo</h1>
-    </ContainerSC>
-  );
+export const ContentMap = (): JSX.Element => {
+  return <ContainerSC>MAPA</ContainerSC>;
 };

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
-  background-color: darkblue;
-
-  grid-area: contentTwo;
+  grid-area: contentBus;
+  color: white;
 `;

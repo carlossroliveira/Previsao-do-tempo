@@ -9,11 +9,11 @@ import React from 'react';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC } from './contentOneStyles';
+import { ContainerSC } from './contentInfStyles';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
 
-export const ContentOne = (): JSX.Element => {
-  return <ContainerSC>CONTENTONE</ContainerSC>;
+export const ContentInf = (): JSX.Element => {
+  return <ContainerSC>TEMAS</ContainerSC>;
 };
