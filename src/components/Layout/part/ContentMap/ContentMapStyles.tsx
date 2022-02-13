@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
+  grid-area: contentMap;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
@@ -8,6 +9,6 @@ export const ContainerSC = styled.section`
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
   padding: 2rem;
-  color: white;
-  grid-area: contentMap;
+  color: ${(props) => props.theme.color.primary};
+  font-family: ${(props) => props.theme.fontFamily.fontDefault};
 `;

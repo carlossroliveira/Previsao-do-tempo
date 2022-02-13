@@ -4,9 +4,18 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     title: string;
 
-    colors: {
+    fontFamily: {
+      fontDefault: string;
+    };
+    color: {
+      primary: string;
+    };
+    background: {
       primary: string;
       secondary: string;
+    };
+    boxShadow: {
+      primary: string;
     };
   }
 }

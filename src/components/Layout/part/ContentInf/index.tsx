@@ -15,5 +15,13 @@ import { ContainerSC } from './contentInfStyles';
 // -------------------------------------------------
 
 export const ContentInf = (): JSX.Element => {
-  return <ContainerSC>TEMAS</ContainerSC>;
+  return (
+    <ContainerSC>
+      <div>
+        <h2>TEMA</h2>
+        <p>Dark</p>
+      </div>
+      <button>Troca</button>
+    </ContainerSC>
+  );
 };

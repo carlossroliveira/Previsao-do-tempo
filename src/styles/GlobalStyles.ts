@@ -16,11 +16,11 @@ body {
   width: 12px
 }
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: ${(props) => props.theme.background.primary};
   border-radius: 50px;
-  border: 1px solid black;
+  border: 1px solid ${(props) => props.theme.background.primary};
 }
 ::-webkit-scrollbar-button {
-  background: black;
+  background: ${(props) => props.theme.background.primary};
 }
 `;

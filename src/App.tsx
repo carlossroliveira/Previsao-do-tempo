@@ -8,8 +8,8 @@ import { Routes } from './routes';
 // Styles
 // -------------------------------------------------
 import { GlobalStyle } from './styles/GlobalStyles';
-import Green from './styles/themes/Green';
-import Marron from './styles/themes/Marron';
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
 
 export const App = (): JSX.Element => {
   const [themes, setThemes] = useState<boolean>();
@@ -17,12 +17,10 @@ export const App = (): JSX.Element => {
   const handleThemes = () => setThemes((theme) => !theme);
 
   return (
-    <>
-      <ThemeProvider theme={themes ? Green : Marron}>
-        <GlobalStyle />
-        <Routes />
-        <button onClick={handleThemes}>AAAA</button>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={themes ? light : dark}>
+      <GlobalStyle />
+      <Routes />
+      <button onClick={handleThemes}>AAAA</button>
+    </ThemeProvider>
   );
 };

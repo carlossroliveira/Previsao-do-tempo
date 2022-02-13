@@ -3,13 +3,17 @@
 // -------------------------------------------------
 import React from 'react';
 // -------------------------------------------------
-// Components
-// -------------------------------------------------
-
-// -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC } from './sidebarStyles';
+import {
+  ContainerSC,
+  TitleSC,
+  DivSC,
+  UlSC,
+  LiSC,
+  SpanSC,
+  ParagraphSC,
+} from './sidebarStyles';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -17,26 +21,63 @@ import { ContainerSC } from './sidebarStyles';
 export const Sidebar = (): JSX.Element => {
   return (
     <ContainerSC>
-      <ul>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-        <li>LISTA DAS CAPITAIS</li>
-      </ul>
+      <TitleSC>Capitais</TitleSC>
+      <DivSC>
+        <p>Min</p>
+        <p>Max</p>
+      </DivSC>
+      <UlSC>
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>18°</p>
+            <p>27°</p>
+          </DivSC>
+          <ParagraphSC>Salvador</ParagraphSC>
+        </LiSC>
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>18°</p>
+            <p>27°</p>
+          </DivSC>
+          <ParagraphSC>Rio de Janeiro</ParagraphSC>
+        </LiSC>
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>18°</p>
+            <p>27°</p>
+          </DivSC>
+          <ParagraphSC>São Paulo</ParagraphSC>
+        </LiSC>
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>18°</p>
+            <p>27°</p>
+          </DivSC>
+          <ParagraphSC>Testando com nome grande</ParagraphSC>
+        </LiSC>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+        <li>18° 27° Salvador</li>
+      </UlSC>
     </ContainerSC>
   );
 };

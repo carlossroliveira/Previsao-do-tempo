@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
-  background: linear-gradient(
-    214deg,
-    rgba(53, 133, 139, 1) 10%,
-    rgba(79, 189, 186, 1) 72%
-  );
-
-  color: white;
-
   grid-area: contentInf;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  color: ${(props) => props.theme.color.primary};
+  font-family: ${(props) => props.theme.fontFamily.fontDefault};
+  border: 2px solid tomato;
+
+  div {
+    text-align: center;
+    h2 {
+      margin: 0;
+    }
+  }
 `;
