@@ -1,26 +1,21 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { useState } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Routes } from './routes';
+import { useMyHook } from './components/hooks/theme';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
 import { GlobalStyle } from './styles/GlobalStyles';
-import light from './styles/themes/light';
-import dark from './styles/themes/dark';
 
 export const App = (): JSX.Element => {
-  const [themes, setThemes] = useState<boolean>();
-
-  const handleThemes = () => setThemes((theme) => !theme);
-
+  const { themes } = useMyHook();
   return (
-    <ThemeProvider theme={themes ? light : dark}>
+    <ThemeProvider theme={themes}>
       <GlobalStyle />
       <Routes />
-      <button onClick={handleThemes}>AAAA</button>
     </ThemeProvider>
   );
 };

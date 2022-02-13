@@ -5,7 +5,7 @@ import React from 'react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-
+import { SwitchComponent } from '../../../SwitchComponent';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
@@ -17,11 +17,8 @@ import { ContainerSC } from './contentInfStyles';
 export const ContentInf = (): JSX.Element => {
   return (
     <ContainerSC>
-      <div>
-        <h2>TEMA</h2>
-        <p>Dark</p>
-      </div>
-      <button>Troca</button>
+      <h2>TEMA</h2>
+      <SwitchComponent />
     </ContainerSC>
   );
 };
