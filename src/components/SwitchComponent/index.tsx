@@ -1,28 +1,32 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { useState } from 'react';
-import { useMyHook } from '../hooks/theme';
+import React, { useCallback, useState } from 'react';
+// -------------------------------------------------
+// Components
+// -------------------------------------------------
+import { useMyHook } from '../../hooks/theme';
+// Styles
+// -------------------------------------------------
 import { ParagraphSC, Toggle } from './SwitchComponentStyles';
 
 export const SwitchComponent = (): JSX.Element => {
   const { handleThemes } = useMyHook();
+  const [themesValue, setThemesValue] = useState<boolean>(false);
 
-  const [first, setfirst] = useState<boolean>(false);
-
-  const test = () => {
-    setfirst((firstt) => !firstt);
+  const handleThemesFc = useCallback(() => {
+    setThemesValue((switchValue) => !switchValue);
     handleThemes();
-  };
+  }, [handleThemes]);
 
   return (
     <>
-      <ParagraphSC>{!first ? 'Light' : 'Dark'}</ParagraphSC>
+      <ParagraphSC>{!themesValue ? 'Dark' : 'Light'}</ParagraphSC>
       <Toggle
-        checked={first}
+        checked={themesValue}
         uncheckedIcon={false}
         checkedIcon={false}
-        onChange={test}
+        onChange={handleThemesFc}
       />
     </>
   );

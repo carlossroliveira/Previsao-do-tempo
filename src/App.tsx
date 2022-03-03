@@ -4,7 +4,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Routes } from './routes';
-import { useMyHook } from './components/hooks/theme';
+import { useMyHook } from './hooks/theme';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------

@@ -9,12 +9,19 @@ export const ContainerSC = styled.section`
   color: ${(props) => props.theme.color.primary};
   font-family: ${(props) => props.theme.fontFamily.fontDefault};
 
-  h1 {
+  @media (max-width: 500px) {
     margin: 0;
   }
+`;
+
+export const TitleSC = styled.h1`
+  margin: 0;
+
   @media (max-width: 870px) {
-    h1 {
-      font-size: 60px;
-    }
+    font-size: 8vw;
+  }
+  @media (max-width: 500px) {
+    text-align: center;
+    font-size: 10vw;
   }
 `;

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
   margin: 0 auto;
-  padding: 5rem;
   height: 100vh;
+  background-color: #393e46;
+  padding: 3rem;
 
   display: grid;
   gap: 2rem;
@@ -24,6 +25,7 @@ export const ContainerSC = styled.section`
   @media (max-width: 870px) {
     font-size: 87.5%;
     height: 100%;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       'header header header'
       'sidebar sidebar sidebar'

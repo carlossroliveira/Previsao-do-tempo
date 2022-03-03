@@ -5,20 +5,18 @@ import React from 'react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-
+import { Button } from '../../../Button';
+import { Input } from '../../../Input';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
 import { ContainerSC } from './contentBusStyles';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
 
 export const ContentBus = (): JSX.Element => {
   return (
     <ContainerSC>
-      <input type="text" />
-      <button>Buscar</button>
+      <Input />
+      <Button />
     </ContainerSC>
   );
 };

@@ -9,15 +9,12 @@ import { SwitchComponent } from '../../../SwitchComponent';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC } from './contentInfStyles';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
+import { ContainerSC, TitleSC } from './contentInfStyles';
 
 export const ContentInf = (): JSX.Element => {
   return (
     <ContainerSC>
-      <h2>TEMA</h2>
+      <TitleSC>Tema</TitleSC>
       <SwitchComponent />
     </ContainerSC>
   );

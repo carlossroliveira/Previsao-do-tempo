@@ -5,12 +5,12 @@ import React from 'react';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC, TitleSC } from './headerStyles';
+import { ContainerSC, InputSC } from './inputStyles';
 
-export const Header = (): JSX.Element => {
+export const Input = (): JSX.Element => {
   return (
     <ContainerSC>
-      <TitleSC>Previsão do Tempo</TitleSC>
+      <InputSC type="text" placeholder="Digite sua capital" />
     </ContainerSC>
   );
 };

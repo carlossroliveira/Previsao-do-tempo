@@ -4,7 +4,8 @@ import Switch, { ReactSwitchProps } from 'react-switch';
 export const Toggle = styled(Switch).attrs<ReactSwitchProps>(({ theme }) => ({
   onColor: theme.background.secondary,
   offColor: theme.background.secondary,
-  onHandleColor: theme.background.primary,
+  onHandleColor: theme.color.secondary,
+  offHandleColor: theme.color.secondary,
 }))<ReactSwitchProps>``;
 
 export const ParagraphSC = styled.p`

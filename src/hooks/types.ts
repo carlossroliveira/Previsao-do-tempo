@@ -18,6 +18,7 @@ export interface ITheme {
   };
   color: {
     primary: string;
+    secondary: string;
   };
   background: {
     primary: string;

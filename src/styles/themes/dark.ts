@@ -6,6 +6,7 @@ export default {
   },
   color: {
     primary: '#EEEEEE',
+    secondary: '#393E46',
   },
   background: {
     primary: '#393E46',

@@ -11,5 +11,16 @@ export const ContainerSC = styled.section`
 
   color: ${(props) => props.theme.color.primary};
   font-family: ${(props) => props.theme.fontFamily.fontDefault};
-  border: 2px solid tomato;
+
+  border: 30px ${(props) => props.theme.color.primary} dashed;
+  border-radius: 15px;
+
+  @media (max-width: 870px) {
+    display: block;
+    margin: 4rem;
+  }
+`;
+
+export const TitleSC = styled.h2`
+  text-transform: uppercase;
 `;

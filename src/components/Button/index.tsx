@@ -5,12 +5,12 @@ import React from 'react';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC, TitleSC } from './headerStyles';
+import { ContainerSC, ButtonSC } from './buttonStyles';
 
-export const Header = (): JSX.Element => {
+export const Button = (): JSX.Element => {
   return (
     <ContainerSC>
-      <TitleSC>Previsão do Tempo</TitleSC>
+      <ButtonSC>Buscar</ButtonSC>
     </ContainerSC>
   );
 };
