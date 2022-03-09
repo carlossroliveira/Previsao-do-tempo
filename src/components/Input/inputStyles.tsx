@@ -33,4 +33,8 @@ export const InputSC = styled.input`
   height: 96px;
   font-size: 60px;
   line-height: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

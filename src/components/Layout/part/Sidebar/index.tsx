@@ -3,6 +3,10 @@
 // -------------------------------------------------
 import React from 'react';
 // -------------------------------------------------
+// Components
+// -------------------------------------------------
+import { useFetch } from '../../../../hooks/useFetch';
+// -------------------------------------------------
 // Styles
 // -------------------------------------------------
 import {
@@ -17,8 +21,36 @@ import {
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
+import { IGeneral } from './types';
 
 export const Sidebar = (): JSX.Element => {
+  const { data: dataSalvador } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Salvador',
+  );
+  const { data: dataRioDeJaneiro } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Rio_De_Janeiro',
+  );
+
+  const { data: dataBeloHorizonte } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Belo_Horizonte',
+  );
+  const { data: dataSaoPaulo } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Sao_Paulo',
+  );
+  const { data: dataFlorianopolis } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Florianopolis',
+  );
+  const { data: dataFortaleza } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Fortaleza',
+  );
+  const { data: dataBrasilia } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Bras%C3%ADlia',
+  );
+
+  const { data: dataEspíritoSanto } = useFetch<IGeneral>(
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Esp%C3%ADrito_Santo',
+  );
+
   return (
     <ContainerSC>
       <TitleSC>Capitais</TitleSC>
@@ -26,57 +58,79 @@ export const Sidebar = (): JSX.Element => {
         <p>Min</p>
         <p>Max</p>
       </DivSC>
+
       <UlSC>
         <LiSC>
           <SpanSC></SpanSC>
           <DivSC>
-            <p>18°</p>
-            <p>27°</p>
+            <p>{dataSalvador?.forecast[0].min}°</p>
+            <p>{dataSalvador?.forecast[0].max}°</p>
           </DivSC>
-          <ParagraphSC>Salvador</ParagraphSC>
+          <ParagraphSC>{dataSalvador?.city_name}</ParagraphSC>
         </LiSC>
+
         <LiSC>
           <SpanSC></SpanSC>
           <DivSC>
-            <p>18°</p>
-            <p>27°</p>
+            <p>{dataRioDeJaneiro?.forecast[0].min}°</p>
+            <p>{dataRioDeJaneiro?.forecast[0].max}°</p>
           </DivSC>
-          <ParagraphSC>Rio de Janeiro</ParagraphSC>
+          <ParagraphSC>{dataRioDeJaneiro?.city_name}</ParagraphSC>
         </LiSC>
+
         <LiSC>
           <SpanSC></SpanSC>
           <DivSC>
-            <p>18°</p>
-            <p>27°</p>
+            <p>{dataBeloHorizonte?.forecast[0].min}°</p>
+            <p>{dataBeloHorizonte?.forecast[0].max}°</p>
           </DivSC>
-          <ParagraphSC>São Paulo</ParagraphSC>
+          <ParagraphSC>{dataBeloHorizonte?.city_name}</ParagraphSC>
         </LiSC>
+
         <LiSC>
           <SpanSC></SpanSC>
           <DivSC>
-            <p>18°</p>
-            <p>27°</p>
+            <p>{dataSaoPaulo?.forecast[0].min}°</p>
+            <p>{dataSaoPaulo?.forecast[0].max}°</p>
           </DivSC>
-          <ParagraphSC>Testando com nome grande</ParagraphSC>
+          <ParagraphSC>{dataSaoPaulo?.city_name}</ParagraphSC>
         </LiSC>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
-        <li>18° 27° Salvador</li>
+
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>{dataFlorianopolis?.forecast[0].min}°</p>
+            <p>{dataFlorianopolis?.forecast[0].max}°</p>
+          </DivSC>
+          <ParagraphSC>{dataFlorianopolis?.city_name}</ParagraphSC>
+        </LiSC>
+
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>{dataFortaleza?.forecast[0].min}°</p>
+            <p>{dataFortaleza?.forecast[0].max}°</p>
+          </DivSC>
+          <ParagraphSC>{dataFortaleza?.city_name}</ParagraphSC>
+        </LiSC>
+
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>{dataBrasilia?.forecast[0].min}°</p>
+            <p>{dataBrasilia?.forecast[0].max}°</p>
+          </DivSC>
+          <ParagraphSC>{dataBrasilia?.city_name}</ParagraphSC>
+        </LiSC>
+
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>{dataEspíritoSanto?.forecast[0].min}°</p>
+            <p>{dataEspíritoSanto?.forecast[0].max}°</p>
+          </DivSC>
+          <ParagraphSC>{dataEspíritoSanto?.city_name}</ParagraphSC>
+        </LiSC>
       </UlSC>
     </ContainerSC>
   );

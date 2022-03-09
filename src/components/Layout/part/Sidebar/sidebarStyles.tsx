@@ -15,7 +15,7 @@ export const TitleSC = styled.h1`
 
 export const DivSC = styled.div`
   display: flex;
-  margin-left: 45px;
+  margin-left: 44px;
   p + p {
     margin-left: 1rem;
   }
@@ -83,6 +83,10 @@ export const LiSC = styled.li`
       display: flex;
       flex-wrap: wrap;
     }
+  }
+  @media (max-width: 870px) {
+    justify-content: start;
+    padding-left: 30px;
   }
 `;
 

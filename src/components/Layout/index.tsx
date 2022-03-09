@@ -6,7 +6,7 @@ import React from 'react';
 // Components
 // -------------------------------------------------
 import { Header } from './part/Header';
-import { Sidebar } from './part/Sidebar';
+/* import { Sidebar } from './part/Sidebar'; */
 import { ContentMap } from './part/ContentMap';
 import { ContentBus } from './part/ContentBus';
 import { ContentInf } from './part/ContentInf';
@@ -23,7 +23,7 @@ export const Layout = (): JSX.Element => {
   return (
     <ContainerSC>
       <Header />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <ContentMap />
       <ContentBus />
       <ContentInf />

@@ -5,8 +5,8 @@ import React, { createContext, useContext, useState } from 'react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import dark from '../styles/themes/dark';
-import light from '../styles/themes/light';
+import dark from '../../styles/themes/dark';
+import light from '../../styles/themes/light';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------

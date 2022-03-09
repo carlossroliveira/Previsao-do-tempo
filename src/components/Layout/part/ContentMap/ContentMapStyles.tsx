@@ -10,5 +10,4 @@ export const ContainerSC = styled.section`
 
   padding: 2rem;
   color: ${(props) => props.theme.color.primary};
-  font-family: ${(props) => props.theme.fontFamily.fontDefault};
 `;

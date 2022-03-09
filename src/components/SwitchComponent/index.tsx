@@ -5,7 +5,7 @@ import React, { useCallback, useState } from 'react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { useMyHook } from '../../hooks/theme';
+import { useMyHook } from '../../Context/themes/ContextTheme';
 // Styles
 // -------------------------------------------------
 import { ParagraphSC, Toggle } from './SwitchComponentStyles';
