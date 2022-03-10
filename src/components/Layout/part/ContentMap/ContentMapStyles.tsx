@@ -11,3 +11,46 @@ export const ContainerSC = styled.section`
   padding: 2rem;
   color: ${(props) => props.theme.color.primary};
 `;
+
+export const ContainerPrimarySC = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  border-bottom: 2px solid gray;
+`;
+
+export const PrimaryFirstCubeSC = styled.div`
+  text-align: center;
+  h1 {
+    font-weight: 600;
+  }
+`;
+
+export const PrimarySecondCubeSC = styled.div`
+  max-width: 175px;
+  height: 127px;
+`;
+
+export const PrimaryThirdCubeSC = styled.div`
+  text-align: center;
+`;
+
+export const ContainerSecondarySC = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  text-align: center;
+`;
+
+export const SecondaryFirstCubeSC = styled.div``;
+
+export const SecondarySecondCubeSC = styled.div`
+  width: 85px;
+  height: 55px;
+  img {
+    width: 7rem;
+  }
+`;

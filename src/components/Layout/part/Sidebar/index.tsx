@@ -35,7 +35,7 @@ export const Sidebar = (): JSX.Element => {
     'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Belo_Horizonte',
   );
   const { data: dataSaoPaulo } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Sao_Paulo',
+    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=cf230e99&city_name=Sao_Paulo',
   );
   const { data: dataFlorianopolis } = useFetch<IGeneral>(
     'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Florianopolis',

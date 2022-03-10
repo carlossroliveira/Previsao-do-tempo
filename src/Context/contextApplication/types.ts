@@ -20,20 +20,16 @@ export interface APIInformation {
     temp: number;
     condition_code: string;
     description: string;
-    currently: 'noite';
-    cid: '';
-    city: 'Salvador, BA';
+    city: string;
     img_id: string;
-    humidity: 76;
-    wind_speedy: '4.64 km/h';
     sunrise: string;
     sunset: string;
     condition_slug: string;
-    city_name: 'Salvador';
+    city_name: string;
     forecast: [
       {
         date: string;
-        weekday: 'Dom';
+        weekday: string;
         max: number;
         min: number;
         description: string;
