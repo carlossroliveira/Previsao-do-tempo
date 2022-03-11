@@ -8,6 +8,8 @@ import { ChangeEvent, ReactNode } from 'react';
 export interface IContextApplication {
   data: APIInformation | null;
   storage: string;
+  loading: boolean;
+  validateInput: RegExpMatchArray | null;
   onChangeInformation: (_: ChangeEvent<HTMLInputElement>) => void;
   handleButtonAction: (_: string) => void;
 }

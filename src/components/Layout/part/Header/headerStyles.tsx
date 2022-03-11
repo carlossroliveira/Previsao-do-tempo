@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ContainerSC = styled.section`
   grid-area: header;
 
-  font-size: 4rem;
   margin: 0 0 0 4rem;
 
   color: ${(props) => props.theme.color.primary};
@@ -15,6 +14,7 @@ export const ContainerSC = styled.section`
 `;
 
 export const TitleSC = styled.h1`
+  font-size: 4rem;
   margin: 0;
 
   @media (max-width: 870px) {

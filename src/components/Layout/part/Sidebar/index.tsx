@@ -17,6 +17,7 @@ import {
   LiSC,
   SpanSC,
   ParagraphSC,
+  ParagraphSecondarySC,
 } from './sidebarStyles';
 // -------------------------------------------------
 // Types
@@ -24,6 +25,7 @@ import {
 import { IGeneral } from './types';
 
 export const Sidebar = (): JSX.Element => {
+  const currentYear: number = new Date().getFullYear();
   const { data: dataSalvador } = useFetch<IGeneral>(
     'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Salvador',
   );
@@ -132,6 +134,9 @@ export const Sidebar = (): JSX.Element => {
           <ParagraphSC>{dataEspíritoSanto?.city_name}</ParagraphSC>
         </LiSC>
       </UlSC>
+      <ParagraphSecondarySC>
+        &copy; {currentYear} | Carlos Oliveira
+      </ParagraphSecondarySC>
     </ContainerSC>
   );
 };

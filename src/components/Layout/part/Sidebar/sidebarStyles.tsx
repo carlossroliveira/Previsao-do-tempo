@@ -37,7 +37,7 @@ export const UlSC = styled.ul`
   padding: 0;
   list-style: none;
 
-  height: calc(100vh - 530px);
+  height: calc(100vh - 495px);
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
@@ -97,4 +97,10 @@ export const SpanSC = styled.span`
   height: 60%;
   border-radius: 1px;
   background-color: ${(props) => props.theme.background.secondary};
+`;
+
+export const ParagraphSecondarySC = styled.p`
+  text-align: center;
+  margin: 40px 0;
+  font-size: 20px;
 `;

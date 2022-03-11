@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerSC = styled.div`
+export const ContainerSC = styled.div<{ error?: boolean }>`
   display: flex;
   align-items: center;
 
@@ -10,6 +10,7 @@ export const ContainerSC = styled.div`
   -ms-transform: scale(0.5);
   -webkit-transform: scale(0.5);
   background-color: ${({ theme }) => theme.background.secondary};
+
   box-shadow: 0 10px 40px ${({ theme }) => theme.color.primary},
     0 0 0 20px ${({ theme }) => theme.color.secondary},
     0 0 0 20px ${({ theme }) => theme.color.primary};
@@ -19,6 +20,11 @@ export const ContainerSC = styled.div`
       0 0 0 20px ${({ theme }) => theme.color.primary},
       0 0 0 20px ${({ theme }) => theme.color.primary};
   }
+
+  box-shadow: ${(props) =>
+    props.error
+      ? '0 10px 40px tomato, 0 0 0 20px #393e46, 0 0 0 20px tomato;'
+      : '0 10px 40px #eeeeee, 0 0 0 20px #393e46, 0 0 0 20px #eeeeee;'};
 `;
 
 export const InputSC = styled.input`
