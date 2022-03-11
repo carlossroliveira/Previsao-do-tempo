@@ -53,7 +53,7 @@ export const Sidebar = (): JSX.Element => {
 
   return (
     <ContainerSC>
-      <TitleSC>Capitais</TitleSC>
+      <TitleSC>Estados</TitleSC>
       <DivSC>
         <p>Min</p>
         <p>Max</p>
@@ -90,15 +90,6 @@ export const Sidebar = (): JSX.Element => {
         <LiSC>
           <SpanSC></SpanSC>
           <DivSC>
-            <p>{dataSaoPaulo?.forecast[0].min}°</p>
-            <p>{dataSaoPaulo?.forecast[0].max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataSaoPaulo?.city_name}</ParagraphSC>
-        </LiSC>
-
-        <LiSC>
-          <SpanSC></SpanSC>
-          <DivSC>
             <p>{dataFlorianopolis?.forecast[0].min}°</p>
             <p>{dataFlorianopolis?.forecast[0].max}°</p>
           </DivSC>
@@ -112,6 +103,15 @@ export const Sidebar = (): JSX.Element => {
             <p>{dataFortaleza?.forecast[0].max}°</p>
           </DivSC>
           <ParagraphSC>{dataFortaleza?.city_name}</ParagraphSC>
+        </LiSC>
+
+        <LiSC>
+          <SpanSC></SpanSC>
+          <DivSC>
+            <p>{dataSaoPaulo?.forecast[0].min}°</p>
+            <p>{dataSaoPaulo?.forecast[0].max}°</p>
+          </DivSC>
+          <ParagraphSC>{dataSaoPaulo?.city_name}</ParagraphSC>
         </LiSC>
 
         <LiSC>

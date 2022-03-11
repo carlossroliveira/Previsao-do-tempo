@@ -10,7 +10,6 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
-  /* background-color: #393e46; */
 }
 
 ::-webkit-scrollbar {

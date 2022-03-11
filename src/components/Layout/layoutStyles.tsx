@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const ContainerSC = styled.section`
   margin: 0 auto;
   height: 100vh;
-  background-color: #393e46;
   padding: 3rem;
+
+  box-sizing: border-box;
 
   display: grid;
   gap: 2rem;
@@ -18,11 +19,7 @@ export const ContainerSC = styled.section`
 
   background: ${(props) => props.theme.background.primary};
 
-  @media (max-width: 1080px) {
-    font-size: 93.75%;
-  }
-
-  @media (max-width: 870px) {
+  @media (max-width: 1025px) {
     font-size: 87.5%;
     height: 100%;
     grid-template-columns: repeat(3, 1fr);

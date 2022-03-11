@@ -1,7 +1,7 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React from 'react';
+import React, { useCallback } from 'react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
@@ -24,9 +24,9 @@ import {
 // -------------------------------------------------
 
 export const ContentMap = (): JSX.Element => {
-  const { dataInformation } = useMyHookApplication();
+  const { data } = useMyHookApplication();
 
-  const definingImages = React.useCallback((type: string) => {
+  const definingImages = useCallback((type: string) => {
     const Img = {
       storm: `http://assets.api.hgbrasil.com/weather/images/1.png`,
       snow: `http://assets.api.hgbrasil.com/weather/images/15.png`,
@@ -41,56 +41,49 @@ export const ContentMap = (): JSX.Element => {
       default: 'Ops, sem img',
     } as { [type: string]: string };
 
-    function returnImg(value: string) {
-      return Img[value] || Img.default;
-    }
-
-    return returnImg(type);
+    return Img[type] || Img.default;
   }, []);
 
   return (
     <ContainerSC>
       <ContainerPrimarySC>
         <PrimaryFirstCubeSC>
-          <h1>{dataInformation?.results.city}</h1>
-          <p>{dataInformation?.results.sunrise}</p>
-          <p>{dataInformation?.results.sunset}</p>
+          <h1>{data?.results.city}</h1>
+          <p>{data?.results.sunrise}</p>
+          <p>{data?.results.sunset}</p>
         </PrimaryFirstCubeSC>
         <PrimarySecondCubeSC>
           <img
-            src={`http://assets.api.hgbrasil.com/weather/images/${dataInformation?.results.img_id}.png`}
-            alt={dataInformation?.results.condition_slug}
+            src={`http://assets.api.hgbrasil.com/weather/images/${data?.results.img_id}.png`}
+            alt={data?.results.condition_slug}
           />
         </PrimarySecondCubeSC>
         <PrimaryThirdCubeSC>
-          <h1>{dataInformation?.results.temp}°</h1>
-          <p>{dataInformation?.results.description}</p>
+          <h1>{data?.results.temp}°</h1>
+          <p>{data?.results.description}</p>
         </PrimaryThirdCubeSC>
       </ContainerPrimarySC>
 
       <ContainerSecondarySC>
-        {dataInformation?.results?.forecast?.splice(0, 4)?.map((item) => {
+        {data?.results?.forecast?.slice(0, 4).map((item) => {
           return (
-            <SecondaryFirstCubeSC key={item.date}>
+            <SecondaryFirstCubeSC key={item?.date}>
               <p>
-                {item.weekday} - {item.date}
+                {item?.weekday} - {item?.date}
               </p>
 
               <SecondarySecondCubeSC>
                 <img
-                  src={definingImages(`${item.condition}`)}
-                  alt={item.condition}
+                  src={definingImages(`${item?.condition}`)}
+                  alt={item?.condition}
                 />
               </SecondarySecondCubeSC>
 
-              <p>{item.max}° C</p>
-              <p>{item.min}° C</p>
+              <p>{item?.max}° C</p>
+              <p>{item?.min}° C</p>
             </SecondaryFirstCubeSC>
           );
         })}
-
-        {/* <input value={storage} type="text" onChange={onChangeTesting} />
-        <button onClick={() => kkk(storage)}>Buscar</button> */}
       </ContainerSecondarySC>
     </ContainerSC>
   );

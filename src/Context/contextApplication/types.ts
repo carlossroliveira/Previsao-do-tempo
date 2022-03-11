@@ -6,7 +6,7 @@ import { ChangeEvent, ReactNode } from 'react';
 // Types
 // -------------------------------------------------
 export interface IContextApplication {
-  dataInformation: APIInformation | null;
+  data: APIInformation | null;
   storage: string;
   onChangeInformation: (_: ChangeEvent<HTMLInputElement>) => void;
   handleButtonAction: (_: string) => void;

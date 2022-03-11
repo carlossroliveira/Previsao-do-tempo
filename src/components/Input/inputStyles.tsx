@@ -4,6 +4,7 @@ export const ContainerSC = styled.div`
   display: flex;
   align-items: center;
 
+  margin-bottom: 1rem;
   border-radius: 20px;
   transform: scale(0.5);
   -ms-transform: scale(0.5);

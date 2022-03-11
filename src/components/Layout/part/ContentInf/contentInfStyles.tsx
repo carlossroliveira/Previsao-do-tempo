@@ -12,8 +12,13 @@ export const ContainerSC = styled.section`
   color: ${(props) => props.theme.color.primary};
   font-family: ${(props) => props.theme.fontFamily.fontDefault};
 
-  border: 30px ${(props) => props.theme.color.primary} dashed;
+  border: 10px ${(props) => props.theme.color.primary} dashed;
   border-radius: 15px;
+
+  @media (max-width: 1025px) {
+    margin: 7rem 0;
+    padding: 1rem;
+  }
 
   @media (max-width: 870px) {
     display: block;

@@ -6,9 +6,9 @@ import React, {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useState,
 } from 'react';
+import { useFetch } from '../../hooks/useFetch';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -23,21 +23,12 @@ const Context = createContext({} as IContextApplication);
 export const ThemeProviderApplication = ({
   children,
 }: IContextApplicationProvider): JSX.Element => {
-  const [dataInformation, setDataInformation] = useState<APIInformation | null>(
-    null,
-  );
   const [cityName, setCityName] = useState<string>('');
   const [storage, setStorage] = useState<string>('');
 
-  useEffect(() => {
-    (async () => {
-      fetch(
-        `https://api.hgbrasil.com/weather?key=cf230e99&city_name=${cityName}`,
-      )
-        .then((response) => response.json())
-        .then((json) => setDataInformation(json));
-    })();
-  }, [cityName]);
+  const { data } = useFetch<APIInformation>(
+    `https://api.hgbrasil.com/weather?key=cf230e99&city_name=${cityName}`,
+  );
 
   const onChangeInformation = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
@@ -54,7 +45,7 @@ export const ThemeProviderApplication = ({
   return (
     <Context.Provider
       value={{
-        dataInformation,
+        data,
         storage,
         onChangeInformation,
         handleButtonAction,
