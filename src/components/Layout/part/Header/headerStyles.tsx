@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const ContainerSC = styled.section`
   grid-area: header;
@@ -13,9 +13,19 @@ export const ContainerSC = styled.section`
   }
 `;
 
+export const TextAnimation = keyframes`
+  to {
+      opacity: 1;
+      transform: initial;
+  }
+`;
+
 export const TitleSC = styled.h1`
   font-size: 4rem;
   margin: 0;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: ${TextAnimation} 0.5s linear forwards;
 
   @media (max-width: 870px) {
     font-size: 8vw;

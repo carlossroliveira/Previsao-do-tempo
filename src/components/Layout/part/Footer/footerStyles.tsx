@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+export const TextAnimation = keyframes`
+  to {
+      opacity: 1;
+      transform: initial;
+  }
+`;
 
 export const ContainerSC = styled.section`
   grid-area: footer;
@@ -8,6 +15,9 @@ export const ContainerSC = styled.section`
 
   margin: 0 auto;
   width: 100%;
+
+  transform: translateY(+50px);
+  animation: ${TextAnimation} 0.5s linear forwards;
 `;
 
 export const SubContainerSC = styled.div`

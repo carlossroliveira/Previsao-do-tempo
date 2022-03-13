@@ -28,7 +28,8 @@
       "error",
       {
         "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
+        "varsIgnorePattern": "^_",
+        "react/display-name": "off"
       }
     ]
   },

@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+export const TextAnimation = keyframes`
+  to {
+      opacity: 1;
+      transform: initial;
+  }
+`;
 
 export const ContainerSC = styled.section`
   grid-area: contentMap;
@@ -10,6 +17,9 @@ export const ContainerSC = styled.section`
 
   padding: 1rem;
   color: ${(props) => props.theme.color.primary};
+
+  transform: translateX(+50px);
+  animation: ${TextAnimation} 0.5s linear forwards;
 `;
 
 export const ContainerPrimarySC = styled.div`

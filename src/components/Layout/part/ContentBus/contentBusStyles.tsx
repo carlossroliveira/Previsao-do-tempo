@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+export const TextAnimation = keyframes`
+  to {
+      opacity: 1;
+      transform: initial;
+  }
+`;
 
 export const ContainerSC = styled.section`
   grid-area: contentBus;
@@ -7,6 +14,9 @@ export const ContainerSC = styled.section`
 
   color: ${(props) => props.theme.color.primary};
   font-family: ${(props) => props.theme.fontFamily.fontDefault};
+
+  transform: scale(0.5);
+  animation: ${TextAnimation} 0.5s linear forwards;
 `;
 
 export const ParagraphSC = styled.p`
@@ -15,5 +25,3 @@ export const ParagraphSC = styled.p`
   color: tomato;
   letter-spacing: 3px;
 `;
-
-// box-shadow: 0 10px 40px tomato, 0 0 0 20px #393e46, 0 0 0 20px tomato;
