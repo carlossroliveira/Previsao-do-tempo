@@ -30,7 +30,7 @@ export const ThemeProviderApplication = ({
   const [validate, setValidate] = useState<string>('');
 
   const { data } = useFetch<APIInformation>(
-    `https://api.hgbrasil.com/weather?key=cf230e99&city_name=${cityName}`,
+    `https://api.hgbrasil.com/weather?key=871d8736&city_name=${cityName}`,
   );
 
   const onChangeInformation = useCallback(

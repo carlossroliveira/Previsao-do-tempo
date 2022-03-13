@@ -3,7 +3,6 @@
 // -------------------------------------------------
 import React from 'react';
 import Slider from 'react-slick';
-
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
@@ -17,9 +16,6 @@ import image06 from '../../../assets/sthree.png';
 // Styles
 // -------------------------------------------------
 import { ContainerSC, SubContainerSC, DivSC, ImgSC } from './footerStyles';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
 
 export const Footer = (): JSX.Element => {
   const settings = {

@@ -19,19 +19,17 @@ export const Input = (): JSX.Element => {
   const errorMessage = useMemo(() => {
     return !!validateInput;
   }, [validateInput]);
-  console.log(!!validateInput);
-  return (
-    <>
-      <ContainerSC error={errorMessage}>
-        <InputSC
-          type="text"
-          placeholder="Digite seu estado"
-          value={storage}
-          onChange={onChangeInformation}
-        />
 
-        {loading && <Hourglass color={'#393E46'} />}
-      </ContainerSC>
-    </>
+  return (
+    <ContainerSC error={errorMessage}>
+      <InputSC
+        type="text"
+        placeholder="Digite seu estado"
+        value={storage}
+        onChange={onChangeInformation}
+      />
+
+      {loading && <Hourglass color={'#393E46'} />}
+    </ContainerSC>
   );
 };

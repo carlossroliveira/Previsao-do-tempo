@@ -15,9 +15,6 @@ import { Footer } from './part/Footer';
 // Styles
 // -------------------------------------------------
 import { ContainerSC } from './layoutStyles';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
 
 export const Layout = (): JSX.Element => {
   return (

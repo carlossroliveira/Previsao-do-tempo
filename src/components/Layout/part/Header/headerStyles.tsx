@@ -2,11 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 export const ContainerSC = styled.section`
   grid-area: header;
-
   margin: 0 0 0 4rem;
-
-  color: ${(props) => props.theme.color.primary};
-  font-family: ${(props) => props.theme.fontFamily.fontDefault};
 
   @media (max-width: 500px) {
     margin: 0;
@@ -21,6 +17,9 @@ export const TextAnimation = keyframes`
 `;
 
 export const TitleSC = styled.h1`
+  color: ${(props) => props.theme.color.primary};
+  font-family: ${(props) => props.theme.fontFamily.fontDefault};
+
   font-size: 4rem;
   margin: 0;
   opacity: 0;

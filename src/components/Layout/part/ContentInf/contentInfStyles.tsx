@@ -38,4 +38,7 @@ export const ContainerSC = styled.section`
 
 export const TitleSC = styled.h2`
   text-transform: uppercase;
+
+  color: ${(props) => props.theme.color.primary};
+  font-family: ${(props) => props.theme.fontFamily.fontDefault};
 `;
