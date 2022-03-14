@@ -65,7 +65,7 @@ export const ContentMap = (): JSX.Element => {
       </ContainerPrimarySC>
 
       <ContainerSecondarySC>
-        {data?.results?.forecast?.slice(0, 4).map((item) => {
+        {data?.results?.forecast?.slice(1, 5).map((item) => {
           return (
             <SecondaryFirstCubeSC key={item?.date}>
               <p>
