@@ -1,13 +1,12 @@
 <h1 align="center"> 🚀 Weather forecast </h1>
 
 ---
-![Gif](https://user-images.githubusercontent.com/63623377/158278577-38d38486-e4e6-42a5-a848-86061a4af0ac.gif)
----
+
+## ![Gif](https://user-images.githubusercontent.com/63623377/158278577-38d38486-e4e6-42a5-a848-86061a4af0ac.gif)
 
 ## Weather forecast
 
 I'm using a Private API from hgbrasil. To list States.
-
 
 ```bash
 # Access the project folder and download dependencies.
@@ -30,7 +29,6 @@ $ npm start
 
 ## ♟️ Techs
 
-
 ![VSCode](https://img.shields.io/badge/-VSCode-0085D1?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/-GitHub-212121?style=flat-square&logo=GitHub&logoColor=white)
@@ -38,9 +36,6 @@ $ npm start
 ![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=React&logoColor=2F74C0)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-white?style=flat-square&logo=TypeScript&logoColor=2F74C0)
 ![Styled-components](https://img.shields.io/badge/-Styled%20Components-pink?style=flat-square&logo=styled-components)
-
-
-
 
 ## 👤 Author
 
