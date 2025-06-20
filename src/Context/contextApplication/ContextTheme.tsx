@@ -24,13 +24,15 @@ const Context = createContext({} as IContextApplication);
 export const ThemeProviderApplication = ({
   children,
 }: IContextApplicationProvider): JSX.Element => {
-  const [cityName, setCityName] = useState<string>('');
+  const [cityName, setCityName] = useState<string>('salvador');
   const [storage, setStorage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [validate, setValidate] = useState<string>('');
 
+  const API_KEY: string = process.env.REACT_APP_API_KEY || '';
+
   const { data } = useFetch<APIInformation>(
-    `https://api.hgbrasil.com/weather?key=871d8736&city_name=${cityName}`,
+    `weather?key=${API_KEY}&city_name=${cityName}`,
   );
 
   const onChangeInformation = useCallback(

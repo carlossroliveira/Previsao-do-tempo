@@ -51,9 +51,6 @@ export const UlSC = styled.ul`
   padding: 0;
   list-style: none;
 
-  height: calc(100vh - 495px);
-  overflow-y: scroll;
-
   ::-webkit-scrollbar {
     width: 10px;
   }

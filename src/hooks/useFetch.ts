@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const useFetch = <T = unknown>(url: string) => {
+export const useFetch = <T = unknown>(url: string): { data: T | null } => {
   const [data, setData] = useState<T | null>(null);
 
   useEffect(() => {

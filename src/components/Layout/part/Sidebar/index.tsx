@@ -10,12 +10,12 @@ import { useFetch } from '../../../../hooks/useFetch';
 // Styles
 // -------------------------------------------------
 import {
-  ContainerSC,
-  TitleSC,
-  DivSC,
   UlSC,
+  DivSC,
   LiSC,
   SpanSC,
+  TitleSC,
+  ContainerSC,
   ParagraphSC,
   ParagraphSecondarySC,
 } from './sidebarStyles';
@@ -25,30 +25,32 @@ import {
 import { IGeneral } from './types';
 
 export const Sidebar = (): JSX.Element => {
+  const API_KEY: string = process.env.REACT_APP_API_KEY || '';
+
   const currentYear: number = new Date().getFullYear();
   const { data: dataSalvador } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Salvador',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Salvador`,
   );
   const { data: dataRioDeJaneiro } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Rio_De_Janeiro',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Rio_De_Janeiro`,
   );
 
   const { data: dataBeloHorizonte } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Belo_Horizonte',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Belo_Horizonte`,
   );
 
   const { data: dataFlorianopolis } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Florianopolis',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Florianopolis`,
   );
   const { data: dataFortaleza } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Fortaleza',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Fortaleza`,
   );
   const { data: dataBrasilia } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Bras%C3%ADlia',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Bras%C3%ADlia`,
   );
 
   const { data: dataEspíritoSanto } = useFetch<IGeneral>(
-    'https://api.hgbrasil.com/weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=b5ec0e65&city_name=Esp%C3%ADrito_Santo',
+    `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Esp%C3%ADrito_Santo`,
   );
 
   return (

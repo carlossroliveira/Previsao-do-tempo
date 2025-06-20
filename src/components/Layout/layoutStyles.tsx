@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
   margin: 0 auto;
-  height: 100vh;
-  padding: 3rem;
-
+  padding: 1rem;
   box-sizing: border-box;
 
   display: grid;
