@@ -4,26 +4,20 @@ import axios from 'axios';
 export const useFetch = <T = unknown>(endpoint: string): { data: T | null } => {
   const [data, setData] = useState<T | null>(null);
 
-  const API_BASE_URL: string = process.env.REACT_APP_API_BASE_URL || '';
+  const CORS_PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
+  const HGBRASIL_API_BASE_URL = 'https://api.hgbrasil.com/';
 
   useEffect(() => {
-    if (!API_BASE_URL) {
-      console.error(
-        'Erro: REACT_APP_API_BASE_URL não definida nas variáveis de ambiente!',
-      );
-      return;
-    }
-
-    const fullUrl = `${API_BASE_URL}${endpoint}`;
+    const fullUrl = `${CORS_PROXY_URL}${HGBRASIL_API_BASE_URL}${endpoint}`;
 
     axios
       .get(fullUrl)
       .then((response) => setData(response.data))
       .catch((error) => {
-        console.error('Erro na requisição da API:', error);
+        console.error('Erro na requisição da API (via CORS proxy):', error);
         setData(null);
       });
-  }, [endpoint, API_BASE_URL]);
+  }, [endpoint]);
 
   return { data };
 };
