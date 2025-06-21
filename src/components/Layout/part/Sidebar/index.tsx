@@ -91,11 +91,20 @@ export const Sidebar = (): JSX.Element => {
 
         <LiSC>
           <SpanSC></SpanSC>
-          <DivSC>
-            <p>{dataFlorianopolis?.forecast[0]?.min}°</p>
-            <p>{dataFlorianopolis?.forecast[0]?.max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataFlorianopolis?.city_name}</ParagraphSC>
+          {dataFlorianopolis &&
+          dataFlorianopolis.forecast &&
+          dataFlorianopolis.forecast.length > 0 ? (
+            <DivSC>
+              <p>{dataFlorianopolis.forecast[0].min}°</p>
+              <p>{dataFlorianopolis.forecast[0].max}°</p>
+            </DivSC>
+          ) : (
+            <p>Carregando dados do tempo...</p>
+          )}
+
+          {dataFlorianopolis && dataFlorianopolis.city_name && (
+            <ParagraphSC>{dataFlorianopolis.city_name}</ParagraphSC>
+          )}
         </LiSC>
 
         <LiSC>
