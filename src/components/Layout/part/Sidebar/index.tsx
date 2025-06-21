@@ -1,14 +1,3 @@
-// -------------------------------------------------
-// Packages
-// -------------------------------------------------
-import React from 'react';
-// -------------------------------------------------
-// Components
-// -------------------------------------------------
-import { useFetch } from '../../../../hooks/useFetch';
-// -------------------------------------------------
-// Styles
-// -------------------------------------------------
 import {
   UlSC,
   DivSC,
@@ -19,10 +8,9 @@ import {
   ParagraphSC,
   ParagraphSecondarySC,
 } from './sidebarStyles';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
+import React from 'react';
 import { IGeneral } from './types';
+import { useFetch } from '../../../../hooks/useFetch';
 
 export const Sidebar = (): JSX.Element => {
   const API_KEY: string = process.env.REACT_APP_API_KEY || '';
@@ -64,29 +52,59 @@ export const Sidebar = (): JSX.Element => {
       <UlSC>
         <LiSC>
           <SpanSC></SpanSC>
-          <DivSC>
-            <p>{dataSalvador?.forecast[0]?.min}°</p>
-            <p>{dataSalvador?.forecast[0]?.max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataSalvador?.city_name}</ParagraphSC>
+          {dataSalvador &&
+          dataSalvador.forecast &&
+          dataSalvador.forecast.length > 0 ? (
+            <DivSC>
+              <p>{dataSalvador.forecast[0].min}°</p>
+              <p>{dataSalvador.forecast[0].max}°</p>
+            </DivSC>
+          ) : (
+            <DivSC>
+              <p>Carregando...</p>
+            </DivSC>
+          )}
+          {dataSalvador?.city_name && (
+            <ParagraphSC>{dataSalvador.city_name}</ParagraphSC>
+          )}
         </LiSC>
 
         <LiSC>
           <SpanSC></SpanSC>
-          <DivSC>
-            <p>{dataRioDeJaneiro?.forecast[0]?.min}°</p>
-            <p>{dataRioDeJaneiro?.forecast[0]?.max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataRioDeJaneiro?.city_name}</ParagraphSC>
+          {dataRioDeJaneiro &&
+          dataRioDeJaneiro.forecast &&
+          dataRioDeJaneiro.forecast.length > 0 ? (
+            <DivSC>
+              <p>{dataRioDeJaneiro.forecast[0].min}°</p>
+              <p>{dataRioDeJaneiro.forecast[0].max}°</p>
+            </DivSC>
+          ) : (
+            <DivSC>
+              <p>Carregando...</p>
+            </DivSC>
+          )}
+          {dataRioDeJaneiro?.city_name && (
+            <ParagraphSC>{dataRioDeJaneiro.city_name}</ParagraphSC>
+          )}
         </LiSC>
 
         <LiSC>
           <SpanSC></SpanSC>
-          <DivSC>
-            <p>{dataBeloHorizonte?.forecast[0]?.min}°</p>
-            <p>{dataBeloHorizonte?.forecast[0]?.max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataBeloHorizonte?.city_name}</ParagraphSC>
+          {dataBeloHorizonte &&
+          dataBeloHorizonte.forecast &&
+          dataBeloHorizonte.forecast.length > 0 ? (
+            <DivSC>
+              <p>{dataBeloHorizonte.forecast[0].min}°</p>
+              <p>{dataBeloHorizonte.forecast[0].max}°</p>
+            </DivSC>
+          ) : (
+            <DivSC>
+              <p>Carregando...</p>
+            </DivSC>
+          )}
+          {dataBeloHorizonte?.city_name && (
+            <ParagraphSC>{dataBeloHorizonte.city_name}</ParagraphSC>
+          )}
         </LiSC>
 
         <LiSC>
@@ -99,30 +117,51 @@ export const Sidebar = (): JSX.Element => {
               <p>{dataFlorianopolis.forecast[0].max}°</p>
             </DivSC>
           ) : (
-            <p>Carregando dados do tempo...</p>
+            <DivSC>
+              <p>Carregando...</p>
+            </DivSC>
           )}
-
-          {dataFlorianopolis && dataFlorianopolis.city_name && (
+          {dataFlorianopolis?.city_name && (
             <ParagraphSC>{dataFlorianopolis.city_name}</ParagraphSC>
           )}
         </LiSC>
 
         <LiSC>
           <SpanSC></SpanSC>
-          <DivSC>
-            <p>{dataFortaleza?.forecast[0]?.min}°</p>
-            <p>{dataFortaleza?.forecast[0]?.max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataFortaleza?.city_name}</ParagraphSC>
+          {dataFortaleza &&
+          dataFortaleza.forecast &&
+          dataFortaleza.forecast.length > 0 ? (
+            <DivSC>
+              <p>{dataFortaleza.forecast[0].min}°</p>
+              <p>{dataFortaleza.forecast[0].max}°</p>
+            </DivSC>
+          ) : (
+            <DivSC>
+              <p>Carregando...</p>
+            </DivSC>
+          )}
+          {dataFortaleza?.city_name && (
+            <ParagraphSC>{dataFortaleza.city_name}</ParagraphSC>
+          )}
         </LiSC>
 
         <LiSC>
           <SpanSC></SpanSC>
-          <DivSC>
-            <p>{dataBrasilia?.forecast[0]?.min}°</p>
-            <p>{dataBrasilia?.forecast[0]?.max}°</p>
-          </DivSC>
-          <ParagraphSC>{dataBrasilia?.city_name}</ParagraphSC>
+          {dataBrasilia &&
+          dataBrasilia.forecast &&
+          dataBrasilia.forecast.length > 0 ? (
+            <DivSC>
+              <p>{dataBrasilia.forecast[0].min}°</p>
+              <p>{dataBrasilia.forecast[0].max}°</p>
+            </DivSC>
+          ) : (
+            <DivSC>
+              <p>Carregando...</p>
+            </DivSC>
+          )}
+          {dataBrasilia?.city_name && (
+            <ParagraphSC>{dataBrasilia.city_name}</ParagraphSC>
+          )}
         </LiSC>
 
         <LiSC>
@@ -136,15 +175,15 @@ export const Sidebar = (): JSX.Element => {
             </DivSC>
           ) : (
             <DivSC>
-              <p>Carregando dados de previsão...</p>
+              <p>Carregando...</p>
             </DivSC>
           )}
-
           {dataEspíritoSanto?.city_name && (
             <ParagraphSC>{dataEspíritoSanto.city_name}</ParagraphSC>
           )}
         </LiSC>
       </UlSC>
+
       <ParagraphSecondarySC>
         &copy; {currentYear} | Carlos Oliveira
       </ParagraphSecondarySC>
