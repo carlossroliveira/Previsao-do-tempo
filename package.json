@@ -28,7 +28,6 @@
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md}\""
   },
-  "proxy": "https://api.hgbrasil.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
