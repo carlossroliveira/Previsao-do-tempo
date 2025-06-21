@@ -18,7 +18,7 @@ export default async (request: any, response: any) => {
 
     // 2. Sua API Key da HG Brasil (REACT_APP_API_KEY) está nas variáveis de ambiente do Vercel.
     // Ela é automaticamente acessível aqui nesta Serverless Function.
-    const HGBRASIL_API_KEY = process.env.REACT_APP_API_KEY;
+    const HGBRASIL_API_KEY = 'https://api.hgbrasil.com/';
 
     // 3. Garante que a chave da API esteja presente nos parâmetros para a HG Brasil.
     // (Se seu frontend já envia, isso garante que ela exista)
