@@ -40,7 +40,6 @@ export const ContentMap = (): JSX.Element => {
       cloudly_night: `http://assets.api.hgbrasil.com/weather/images/33n.png`,
       default: 'Ops, sem img',
     } as { [type: string]: string };
-
     return Img[type] || Img.default;
   }, []);
 
@@ -48,39 +47,42 @@ export const ContentMap = (): JSX.Element => {
     <ContainerSC>
       <ContainerPrimarySC>
         <PrimaryFirstCubeSC>
-          <h1>{data?.results.city}</h1>
-          <p>{data?.results.sunrise}</p>
-          <p>{data?.results.sunset}</p>
+          <h1>{data?.results?.city}</h1>
+          <p>{data?.results?.sunrise}</p>
+          <p>{data?.results?.sunset}</p>
         </PrimaryFirstCubeSC>
         <PrimarySecondCubeSC>
           <img
-            src={`http://assets.api.hgbrasil.com/weather/images/${data?.results.img_id}.png`}
-            alt={data?.results.condition_slug}
+            src={`http://assets.api.hgbrasil.com/weather/images/${data?.results?.img_id}.png`}
+            alt={data?.results?.condition_slug}
           />
         </PrimarySecondCubeSC>
         <PrimaryThirdCubeSC>
-          <h1>{data?.results.temp}°</h1>
-          <p>{data?.results.description}</p>
+          <h1>{data?.results?.temp}°</h1>
+          <p>{data?.results?.description}</p>
         </PrimaryThirdCubeSC>
       </ContainerPrimarySC>
 
       <ContainerSecondarySC>
         {data?.results?.forecast?.slice(1, 5).map((item) => {
+          if (!item) {
+            return null;
+          }
           return (
-            <SecondaryFirstCubeSC key={item?.date}>
+            <SecondaryFirstCubeSC key={item.date}>
               <p>
-                {item?.weekday} - {item?.date}
+                {item.weekday} - {item.date}
               </p>
 
               <SecondarySecondCubeSC>
                 <img
-                  src={definingImages(`${item?.condition}`)}
-                  alt={item?.condition}
+                  src={definingImages(item.condition)}
+                  alt={item.condition}
                 />
               </SecondarySecondCubeSC>
 
-              <p>{item?.max}° C</p>
-              <p>{item?.min}° C</p>
+              <p>{item.max}° C</p>
+              <p>{item.min}° C</p>
             </SecondaryFirstCubeSC>
           );
         })}
