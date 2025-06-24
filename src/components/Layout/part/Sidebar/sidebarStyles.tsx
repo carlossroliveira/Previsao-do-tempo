@@ -21,10 +21,6 @@ export const TitleSC = styled.h1`
   text-align: center;
   font-size: 2rem;
   margin: 1rem 0 3rem 0;
-
-  @media (max-width: 870px) {
-    margin: 3rem 0 2rem 0;
-  }
 `;
 
 export const DivSC = styled.div`
@@ -62,9 +58,6 @@ export const UlSC = styled.ul`
   ::-webkit-scrollbar-track {
     border: 1px solid ${(props) => props.theme.color.primary};
     border-radius: 3px;
-  }
-  @media (max-width: 1025px) {
-    height: calc(80vh - 495px);
   }
 `;
 
