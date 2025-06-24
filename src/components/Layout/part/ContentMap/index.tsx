@@ -28,16 +28,16 @@ export const ContentMap = (): JSX.Element => {
 
   const definingImages = useCallback((type: string) => {
     const Img = {
-      storm: `http://assets.api.hgbrasil.com/weather/images/1.png`,
-      snow: `http://assets.api.hgbrasil.com/weather/images/15.png`,
-      hail: `http://assets.api.hgbrasil.com/weather/images/13.png`,
-      rain: `http://assets.api.hgbrasil.com/weather/images/40n.png`,
-      fog: `http://assets.api.hgbrasil.com/weather/images/20.png`,
-      clear_day: `http://assets.api.hgbrasil.com/weather/images/32.png`,
-      clear_night: `http://assets.api.hgbrasil.com/weather/images/31n.png`,
-      cloud: `http://assets.api.hgbrasil.com/weather/images/29n.png`,
-      cloudly_day: `http://assets.api.hgbrasil.com/weather/images/27.png`,
-      cloudly_night: `http://assets.api.hgbrasil.com/weather/images/33n.png`,
+      storm: `/api/images/1.png`,
+      snow: `/api/images/15.png`,
+      hail: `/api/images/13.png`,
+      rain: `/api/images/40n.png`,
+      fog: `/api/images/20.png`,
+      clear_day: `/api/images/32.png`,
+      clear_night: `/api/images/31n.png`,
+      cloud: `/api/images/29n.png`,
+      cloudly_day: `/api/images/27.png`,
+      cloudly_night: `/api/images/33n.png`,
       default: 'Ops, sem img',
     } as { [type: string]: string };
     return Img[type] || Img.default;
@@ -53,7 +53,7 @@ export const ContentMap = (): JSX.Element => {
         </PrimaryFirstCubeSC>
         <PrimarySecondCubeSC>
           <img
-            src={`http://assets.api.hgbrasil.com/weather/images/${data?.results?.img_id}.png`}
+            src={`/api/images/${data?.results?.img_id}.png`}
             alt={data?.results?.condition_slug}
           />
         </PrimarySecondCubeSC>

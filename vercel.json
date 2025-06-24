@@ -3,6 +3,10 @@
     {
       "source": "/api/weather/:path*",
       "destination": "https://api.hgbrasil.com/weather/:path*"
+    },
+    {
+      "source": "/api/images/:path*",
+      "destination": "http://assets.api.hgbrasil.com/weather/images/:path*"
     }
   ]
 }
