@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/weather/:path*",
+      "destination": "https://api.hgbrasil.com/weather/:path*"
+    }
+  ]
+}
