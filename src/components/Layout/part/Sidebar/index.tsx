@@ -15,7 +15,6 @@ import { useFetch } from '../../../../hooks/useFetch';
 export const Sidebar = (): JSX.Element => {
   const API_KEY: string = process.env.REACT_APP_API_KEY || '';
 
-  const currentYear: number = new Date().getFullYear();
   const { data: dataSalvador } = useFetch<IGeneral>(
     `weather?array_limit=1&fields=only_results,city_name,forecast,max,min&key=${API_KEY}&city_name=Salvador`,
   );
@@ -184,9 +183,7 @@ export const Sidebar = (): JSX.Element => {
         </LiSC>
       </UlSC>
 
-      <ParagraphSecondarySC>
-        &copy; {currentYear} | Carlos Oliveira
-      </ParagraphSecondarySC>
+      <ParagraphSecondarySC>&copy; 2022 | Carlos Oliveira</ParagraphSecondarySC>
     </ContainerSC>
   );
 };
