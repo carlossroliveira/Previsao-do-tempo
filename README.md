@@ -50,7 +50,7 @@ $ npm start
 
 ## 📝 License
 
-Copyright © 2021 [Carlos Oliveira](https://github.com/carlossroliveira).<br />
+Copyright © 2022 [Carlos Oliveira](https://github.com/carlossroliveira).<br />
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
 ---
