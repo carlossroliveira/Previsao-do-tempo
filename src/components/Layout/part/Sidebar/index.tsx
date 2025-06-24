@@ -182,7 +182,6 @@ export const Sidebar = (): JSX.Element => {
           )}
         </LiSC>
       </UlSC>
-
       <ParagraphSecondarySC>&copy; 2022 | Carlos Oliveira</ParagraphSecondarySC>
     </ContainerSC>
   );
